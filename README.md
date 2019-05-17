@@ -73,4 +73,4 @@ ngOnInit(): void {
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## Demo
-[Demo url](https://choosealicense.com/licenses/mit/)
+[Demo url](https://y4shvine.github.io/ngx-timer-lib/)
