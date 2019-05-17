@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-timer": [
+        "dist/ngx-timer"
+      ],
+      "ngx-timer/*": [
+        "dist/ngx-timer/*"
+      ]
+    }
   }
 }
