@@ -1,6 +1,12 @@
 {
   "name": "ngx-timer-lib",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "author": "Yashvida Jayasekara",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Y4SHVINE/ngx-timer-lib"
+  },
+  "homepage": "https://github.com/Y4SHVINE/ngx-timer-lib",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -50,5 +56,13 @@
     "tslib": "^1.9.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
-  }
+  },
+  "keywords": [
+    "angular",
+    "timer",
+    "countup",
+    "ngx-timer",
+    "count-up-timer",
+    "ngx count up timer"
+  ]
 }
