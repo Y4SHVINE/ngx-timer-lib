@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgxTimerModule } from 'projects/ngx-timer/src/public-api';
+import { SampleModule } from './sample/sample.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { NgxTimerModule } from 'projects/ngx-timer/src/public-api';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxTimerModule
+    SampleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
