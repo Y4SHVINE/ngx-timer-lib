@@ -1,0 +1,5 @@
+<div [class]="timerConfig?.timerClass ? timerConfig.timerClass : ''">
+  <span>{{timerObj.hours}}</span><span class="time-category">{{timerTextConfig && timerTextConfig.hourText ? timerTextConfig.hourText : 'hh'}} </span> 
+  <span>{{timerObj.mins}}</span><span class="time-category">{{timerTextConfig && timerTextConfig.minuteText ? timerTextConfig.minuteText : 'mm'}}  </span> 
+  <span>{{timerObj.seconds}}</span><span class="time-category">{{timerTextConfig && timerTextConfig.secondsText ? timerTextConfig.secondsText : 'ss'}}</span>
+</div>
