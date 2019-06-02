@@ -52,6 +52,11 @@ export class CountdownTimerService {
     this.totalSeconds = 0;
   }
 
+  //resume Timer
+  resumeTimer = () => {
+    this.isTimerStart = true;
+  }
+
   //get timer value Obj
   getTimerValue = (): Observable<any> => {
     return new Observable(obs => {
@@ -59,7 +64,7 @@ export class CountdownTimerService {
         this.intervalSubscription.unsubscribe();
       }
       this.intervalSubscription = this.interval.subscribe(int => {
-        if (this.isTimerStart && this.totalSeconds >  0) {
+        if (this.isTimerStart && this.totalSeconds > 0) {
           --this.totalSeconds;
           this.timerValue.seconds = this.setTimervalue(this.totalSeconds % 60);
           let totalSecondsForMinutes = 0;

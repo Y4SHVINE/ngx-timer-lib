@@ -37,4 +37,7 @@ export class SampleCountdownTimerComponent implements OnInit {
     this.countdownTimerService.stopTimer();
   }
 
+  resumeTimer = () =>{
+    this.countdownTimerService.resumeTimer();
+  }
 }
