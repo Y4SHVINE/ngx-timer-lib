@@ -119,5 +119,8 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 1. Day,Month and Year Configuration for both timers.
 2. Stopwatch implementation.
 
+## License & copyright
+Licensed under  the [MIT License](LICENSE)
+
 ## Demo
 [Demo url](https://y4shvine.github.io/ngx-timer-lib/)

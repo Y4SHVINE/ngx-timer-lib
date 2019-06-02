@@ -1,6 +1,6 @@
 {
   "name": "ngx-timer-lib",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Yashvida Jayasekara",
   "repository": {
     "type": "git",
@@ -57,6 +57,7 @@
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
   },
+  "license": "MIT",
   "keywords": [
     "angular",
     "timer",

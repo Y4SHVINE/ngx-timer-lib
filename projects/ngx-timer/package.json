@@ -1,6 +1,6 @@
 {
   "name": "ngx-timer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Yashvida Jayasekara",
   "repository": {
     "type": "git",
@@ -13,6 +13,7 @@
     "rxjs": "6.3.3",
     "rxjs-compat": "6.3.3"
   },
+  "license": "MIT",
   "keywords": [
     "angular",
     "timer",
