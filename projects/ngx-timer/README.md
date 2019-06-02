@@ -74,19 +74,23 @@ In html
 ```
 You can import ***CountdownTimerService***  from **ngx-timer** to do the following functionalities.
 
- 1. To start the timer
+ 1.To start the timer
 ```ts
 let cdate = new Date();
 cdate.setHours(cdate.getHours() + 2);
 this.CountdownTimerService.startTimer(cdate);
 ```
-  2. To pause the timer
+  2.To pause the timer
 ```ts
 this.CountdownTimerService.pauseTimer();
 ```
-  3. To stop the timer
+  3.To stop the timer
 ```ts
 this.CountdownTimerService.stopTimer();
+```
+  3.To resume the timer
+```ts
+this.CountdownTimerService.resumeTimer();
 ```
 ***Configurations***
 
@@ -110,6 +114,10 @@ ngOnInit(): void {
 ```
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. 😊
+
+## Impending
+1. Day,Month and Year Configuration for both timers.
+2. Stopwatch implementation.
 
 ## Demo
 [Demo url](https://y4shvine.github.io/ngx-timer-lib/)
