@@ -1,16 +1,14 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable, interval } from 'rxjs';
-import { TimerStaus } from './countdown-timer.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CountdownTimerService {
-
-  public onTimerStatusChange: EventEmitter<any> = new EventEmitter<any>();
+export class StopWatchService {
 
   //Init
   public timerValue = {
+    miliseconds: '00',
     seconds: '00',
     mins: '00',
     hours: '00',
@@ -20,19 +18,15 @@ export class CountdownTimerService {
   public intervalSubscription;
   public totalSeconds: number = 0;
   public currentOperationId: number = 0;
+
   constructor() {
-    this.interval = interval(1000);
+    this.interval = interval(10000);
   }
 
   //start timer
-  startTimer = (startTime: any) => {
-    if (startTime) {
-      let currentDate = new Date();
-      let startedTime = new Date(startTime);
-      this.totalSeconds = (Math.round((currentDate.getTime() - startedTime.getTime()) / 1000)) * -1;
-    }
+  startTimer = () => {
+    debugger;
     this.isTimerStart = true;
-    this.onTimerStatusChange.emit(TimerStaus.START);
     return true;
   }
 
@@ -44,7 +38,6 @@ export class CountdownTimerService {
       this.totalSeconds = Math.round((endedDate.getTime() - startedTime.getTime()) / 1000);
     }
     this.isTimerStart = false;
-    this.onTimerStatusChange.emit(TimerStaus.PAUSE);
     return false;
   }
 
@@ -52,7 +45,6 @@ export class CountdownTimerService {
   stopTimer = () => {
     this.isTimerStart = false;
     this.totalSeconds = 0;
-    this.onTimerStatusChange.emit(TimerStaus.STOP);
   }
 
   //resume Timer
@@ -87,7 +79,6 @@ export class CountdownTimerService {
             this.timerValue.hours = "00";
             this.timerValue.mins = "00";
             this.timerValue.seconds = "00";
-            this.stopTimer();
           }
           obs.next(this.timerValue);
           obs.complete();
@@ -105,4 +96,3 @@ export class CountdownTimerService {
     return (valString.length < 2) ? "0" + valString : valString;
   }
 }
-

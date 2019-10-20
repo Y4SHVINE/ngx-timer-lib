@@ -5,27 +5,32 @@ import { CommonModule } from '@angular/common';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
 import { CountupTimerService } from './countup-timer/countup-timer.service';
 import { CountdownTimerService } from './countdown-timer/countdown-timer.service';
+import { StopWatchComponent } from './stop-watch/stop-watch.component';
+import { StopWatchService } from './stop-watch/stop-watch.service';
 
 @NgModule({
   declarations: [
     CountupTimerComponent, 
-    CountdownTimerComponent
+    CountdownTimerComponent, 
+    StopWatchComponent
   ],
   imports: [
-    CommonModule,
-    BrowserModule
+    CommonModule
   ],
   exports: [
     CountupTimerComponent,
-    CountdownTimerComponent
+    CountdownTimerComponent,
+    StopWatchComponent
   ],
   entryComponents:[
     CountupTimerComponent,
-    CountdownTimerComponent
+    CountdownTimerComponent,
+    StopWatchComponent
   ],
   providers:[
     CountupTimerService,
-    CountdownTimerService
+    CountdownTimerService,
+    StopWatchService
   ]
 })
 export class NgxTimerModule { }

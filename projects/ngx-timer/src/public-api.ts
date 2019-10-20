@@ -13,3 +13,8 @@ export * from './lib/countup-timer/countup-timer.model';
 export * from './lib/countdown-timer/countdown-timer.component';
 export * from './lib/countdown-timer/countdown-timer.service';
 export * from './lib/countdown-timer/countdown-timer.model';
+
+//Stopwatch
+// export * from './lib/stop-watch/stop-watch.component';
+// export * from './lib/stop-watch/stop-watch.service';
+// export * from './lib/countdown-timer/countdown-timer.model';

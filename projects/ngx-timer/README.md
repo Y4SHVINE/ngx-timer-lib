@@ -92,6 +92,17 @@ this.CountdownTimerService.stopTimer();
 ```ts
 this.CountdownTimerService.resumeTimer();
 ```
+  4.To get Current Status
+```ts
+this.CountdownTimerService.onTimerStatusChange.subscribe(status=>{
+  if(status){
+    // status values
+    //START
+    //PAUSE
+    //STOP
+  }
+});
+```
 ***Configurations***
 
 Import **countUpTimerConfigModel** model from ngx-timer you will be able use following configurations.
