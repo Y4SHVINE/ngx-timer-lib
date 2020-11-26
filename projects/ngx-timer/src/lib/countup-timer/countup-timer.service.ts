@@ -12,6 +12,7 @@ export class CountupTimerService {
     mins: '00',
     hours: '00',
   }
+  public startTime = 0;
   public isTimerStart: boolean = false;
   public interval: Observable<any>;
   public intervalSubscription;
@@ -25,8 +26,9 @@ export class CountupTimerService {
   //start timer
   startTimer = (startTime?: any) => {
     if (startTime) {
+      this.startTime = startTime;
       let currentDate = new Date();
-      let startedTime = new Date(startTime);
+      let startedTime = new Date(this.startTime);
       this.totalSeconds = Math.round((currentDate.getTime() - startedTime.getTime()) / 1000);
     }
     this.isTimerStart = true;
@@ -36,8 +38,9 @@ export class CountupTimerService {
   //end timer
   pauseTimer = (startTime?: any, endTime?: any) => {
     if (startTime && endTime) {
+      this.startTime = startTime;
       let endedDate = new Date(endTime);
-      let startedTime = new Date(startTime);
+      let startedTime = new Date(this.startTime);
       this.totalSeconds = Math.round((endedDate.getTime() - startedTime.getTime()) / 1000);
     }
     this.isTimerStart = false;
@@ -58,7 +61,9 @@ export class CountupTimerService {
       }
       this.intervalSubscription = this.interval.subscribe(int => {
         if (this.isTimerStart) {
-          ++this.totalSeconds;
+          let currentDate = new Date();
+          let startedTime = new Date(this.startTime);
+          this.totalSeconds = Math.round((currentDate.getTime() - startedTime.getTime()) / 1000);
           this.timerValue.seconds = this.setTimervalue(this.totalSeconds % 60);
           let totalSecondsForMinutes = 0;
           totalSecondsForMinutes = (Math.trunc(this.totalSeconds / 60) >= 60) ? (this.totalSeconds / 60) % 60 : this.totalSeconds / 60;
